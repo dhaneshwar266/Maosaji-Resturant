@@ -1,0 +1,404 @@
+/* ==========================================================================
+   MAOSAJI – THE TASTE OF INDIAN TRADITION
+   Royal Heritage Indian Aesthetic & Design System
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette */
+  --color-maroon: #70283A;
+  --color-maroon-dark: #4A1724;
+  --color-burgundy: #401923;
+  --color-burgundy-deep: #2A0E16;
+  --color-burgundy-rich: #35141D;
+  --color-gold: #E4AD52;
+  --color-gold-light: #F7D070;
+  --color-gold-bright: #FCDA84;
+  --color-gold-dark: #B8860B;
+  --color-ivory: #FFF8ED;
+  --color-parchment: #FFFDF9;
+  --color-cream: #F4E8D5;
+  --color-cream-light: #FAF4E9;
+  --color-cream-warm: #F0DFC8;
+  --color-text-dark: #29221F;
+  --color-text-muted: #766B64;
+  --color-text-light: #A3968E;
+  --color-white: #FFFFFF;
+
+  /* Accent status colors */
+  --color-verified: #1E7E34;
+  --color-verified-bg: #E8F5E9;
+  --color-verified-border: #A5D6A7;
+  --color-estimated: #C77700;
+  --color-estimated-bg: #FFF3E0;
+  --color-estimated-border: #FFE082;
+  --color-veg-green: #0A8754;
+
+  /* Gradients */
+  --grad-gold: linear-gradient(135deg, #FCDA84 0%, #E4AD52 50%, #B8860B 100%);
+  --grad-gold-hover: linear-gradient(135deg, #FFEAB0 0%, #F5BE60 50%, #C99615 100%);
+  --grad-gold-subtle: linear-gradient(135deg, rgba(247, 208, 112, 0.15) 0%, rgba(228, 173, 82, 0.08) 100%);
+  --grad-maroon: linear-gradient(135deg, #70283A 0%, #401923 100%);
+  --grad-royal-hero: radial-gradient(circle at 50% 20%, #5C1F2E 0%, #401923 55%, #230B12 100%);
+  --grad-card: linear-gradient(180deg, #FFFFFF 0%, #FFFDF9 100%);
+
+  /* Traditional Indian Architectural Arches (Mehraab / Jharokha Curves) */
+  --arch-top: 100px 100px 16px 16px;
+  --arch-top-lg: 140px 140px 24px 24px;
+  --arch-full: 9999px 9999px 16px 16px;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-royal: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 3px 12px rgba(41, 34, 31, 0.06);
+  --shadow-md: 0 8px 24px rgba(41, 34, 31, 0.08);
+  --shadow-lg: 0 16px 40px rgba(41, 34, 31, 0.12);
+  --shadow-royal: 0 14px 44px rgba(64, 25, 35, 0.28);
+  --shadow-gold: 0 8px 28px rgba(228, 173, 82, 0.35);
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 260ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 420ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+}
+
+/* Base Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-light);
+  color: var(--color-text-dark);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  background-color: var(--color-cream-light);
+  background-image: radial-gradient(rgba(228, 173, 82, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: 72px; /* Space for mobile quick bar */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* Focus Indicators */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-burgundy);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--color-text-dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Section Wrapper */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+}
+
+/* Section Header Motif */
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 52px;
+}
+
+.section-pretitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-royal);
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-maroon);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.section-pretitle::before,
+.section-pretitle::after {
+  content: '❧';
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+.section-title {
+  font-size: 2.35rem;
+  margin-bottom: 16px;
+  color: var(--color-burgundy);
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3.2rem;
+  }
+}
+
+.section-description {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+/* Royal Indian Traditional Divider */
+.decorative-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 18px 0 24px 0;
+}
+
+.decorative-divider .divider-line {
+  height: 1.5px;
+  width: 70px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.decorative-divider .divider-diamond {
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: var(--color-gold);
+  border: 1.5px solid var(--color-maroon);
+  box-shadow: 0 0 8px rgba(228, 173, 82, 0.4);
+}
+
+/* Button Component Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--grad-gold);
+  color: var(--color-burgundy-deep);
+  box-shadow: var(--shadow-gold);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.75s ease;
+}
+
+.btn-primary:hover::before {
+  left: 125%;
+}
+
+.btn-primary:hover {
+  background: var(--grad-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(228, 173, 82, 0.45);
+}
+
+.btn-secondary {
+  background: var(--color-maroon);
+  color: var(--color-ivory);
+  border: 1px solid var(--color-gold);
+  box-shadow: var(--shadow-royal);
+}
+
+.btn-secondary:hover {
+  background: var(--color-burgundy);
+  border-color: var(--color-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(64, 25, 35, 0.4);
+}
+
+.btn-outline-gold {
+  background: rgba(228, 173, 82, 0.1);
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold-light);
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline-gold:hover {
+  background: var(--color-gold);
+  color: var(--color-burgundy-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #2ae06f 0%, #159c8d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.48);
+}
+
+/* Badge Styles */
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-verified-bg);
+  color: var(--color-verified);
+  border: 1px solid var(--color-verified-border);
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.badge-estimated {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-estimated-bg);
+  color: var(--color-estimated);
+  border: 1px solid var(--color-estimated-border);
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.badge-veg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--color-veg-green);
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.badge-veg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-veg-green);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-maroon);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-burgundy);
+}

@@ -1,0 +1,68 @@
+import type { GalleryItem } from '../types/restaurant';
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'gal-01',
+    title: 'Crispy South Indian Dosas & Chutneys',
+    category: 'South Indian',
+    imageUrl: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Crispy golden roasted masala dosa served with fresh coconut chutney and steaming sambhar',
+    description: 'Golden fermented rice and lentil crepe roasted with pure desi butter, accompanied by stone-ground coconut chutney, tangy tomato dip, and drumstick sambhar.',
+  },
+  {
+    id: 'gal-02',
+    title: 'Amritsari Chhole Bhature',
+    category: 'Snacks & Thali',
+    imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Puffed golden bhature served with slow-cooked dark spiced chickpeas and pickled onions',
+    description: 'Freshly fried puffed bhature paired with dark aromatic chickpeas simmered in hand-pounded whole spices, accompanied by raw mango pickle and sliced onions.',
+  },
+  {
+    id: 'gal-03',
+    title: 'Signature Mumbai Pav Bhaji',
+    category: 'Snacks & Thali',
+    imageUrl: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Sizzling tawa mashed vegetable bhaji crowned with butter pat alongside toasted soft pav buns',
+    description: 'Slow-cooked mashed garden vegetables blended with butter and house spice blend, served sizzling hot with toasted pav buns, lemon wedges, and chopped red onion.',
+  },
+  {
+    id: 'gal-04',
+    title: 'The Royal Raj Kachori Chaat',
+    category: 'Chatori Street',
+    imageUrl: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Royal Raj Kachori stuffed with sprouts, chilled whisked curd, tamarind chutney, and pomegranate seeds',
+    description: 'Crisp hollow kachori sphere bursting with sprouted lentils, spiced potatoes, chilled sweetened yogurt, tangy saunth, mint chutney, and ruby pomegranate seeds.',
+  },
+  {
+    id: 'gal-05',
+    title: 'Traditional Saffron Ras Malai & Sweets',
+    category: 'Mithai',
+    imageUrl: 'https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Soft chenna patties soaked in saffron pistachio rabdi milk',
+    description: 'Melt-in-mouth cottage cheese discs gently simmered and bathed in thick saffron-scented cardamom milk, lavishly garnished with slivered Iranian pistachios.',
+  },
+  {
+    id: 'gal-06',
+    title: 'Stone-Baked Thin Crust Pizza',
+    category: 'Pizzas',
+    imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Freshly baked artisanal pizza topped with fresh herbs, bell peppers, and bubbling mozzarella',
+    description: 'Crisp artisan crust with vibrant tomato herb coulis, stringy mozzarella cheese, garden bell peppers, sweet red onions, and aromatic oregano seasoning.',
+  },
+  {
+    id: 'gal-07',
+    title: 'Indo-Chinese Wok Specialities',
+    category: 'Chinese Corner',
+    imageUrl: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Wok tossed noodles and vegetable Manchurian with spring onions and garlic',
+    description: 'Fresh street-style Hakka noodles and vegetable dumplings tossed over blazing wok flames with roasted garlic, soy glaze, and fresh scallions.',
+  },
+  {
+    id: 'gal-08',
+    title: 'Warm Family Dining Ambiance',
+    category: 'Ambiance',
+    imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80',
+    altText: 'Warm and inviting Indian family restaurant interior with elegant booths and warm lighting',
+    description: 'Welcoming family dining setting designed for multi-generational celebrations, intimate luncheons, and festive gatherings in Bilaspur, Chhattisgarh.',
+  },
+];
